@@ -1,0 +1,30 @@
+# Git and version control
+.git
+.gitignore
+
+# Docker specific files
+.dockerignore
+Dockerfile
+docker-compose.yaml
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# IDE and OS specific
+.vscode/
+.idea/
+.DS_Store
+*.swo
+
+# Secrets and environment files
+.env
+*.env.*
+
+# Logs and artifacts
+logs/
+*.log

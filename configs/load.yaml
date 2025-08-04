@@ -1,0 +1,9 @@
+# ------------------------------------------
+# Load parameters
+# These settings control how data is loaded into the database
+# ------------------------------------------
+
+stg_table: 'stg_property_rumah'   # Name of the staging table where raw data is initially loaded
+main_table: 'property_rumah'      # Name of the main/production table where cleaned and merged data is stored
+unique_key: 'link'                # Primary key or unique identifier used to deduplicate records (e.g., listing URL)
+batch_size: 500                   # Number of records to insert or upsert in a single batch operation

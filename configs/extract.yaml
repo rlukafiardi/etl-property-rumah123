@@ -1,0 +1,46 @@
+# ==========================================
+# Configuration File for Rumah123 Scraper
+# ==========================================
+
+# ------------------------------------------
+# Region parameters
+# Define each target region with its common name (`name`), 
+# a unique identifier (`id`), a list of administrative areas (`admins`), schedule for scraping (`schedule`).
+# The `schedule` is in cron format and is set to UTC.
+# ------------------------------------------
+regions:
+  - name: 'jakarta'
+    id: 'dki-jakarta'
+    admins: ['Jakarta', 'Kepulauan Seribu']
+    schedule: '0 2 * * *' # 09:00 AM GMT+7 (converted to UTC, which is 2 AM)
+  - name: 'bogor'
+    id: 'bogor'
+    admins: ['Bogor']
+    schedule: '30 2 * * *'  # 09:30 AM GMT+7 (converted to UTC, which is 2:30 AM)
+  - name: 'bekasi'
+    id: 'bekasi'
+    admins: ['Bekasi']
+    schedule: '0 3 * * *' # 10:00 AM GMT+7 (converted to UTC, which is 3 AM)
+  - name: 'depok'
+    id: 'depok'
+    admins: ['Depok']
+    schedule: '30 3 * * *'  # 10:30 AM GMT+7 (converted to UTC, which is 3:30 AM)
+  - name: 'tangerang'
+    id: 'tangerang'
+    admins: ['Tangerang']
+    schedule: '0 4 * * *' # 11:00 AM GMT+7 (converted to UTC, which is 4 AM)
+  - name: 'tangerang_selatan'
+    id: 'tangerang-selatan'
+    admins: ['Tangerang Selatan']
+    schedule: '30 4 * * *'  # 11:30 AM GMT+7 (converted to UTC, which is 4:30 AM)
+
+# ------------------------------------------
+# Extract parameters
+# These define what kind of property listings to scrape
+# ------------------------------------------
+
+ads_type: 'jual'               # Type of ad to scrape. Valid options: {'jual' (for sale), 'sewa' (for rent)}
+property_type: 'rumah'         # Type of property to scrape. Valid options: 
+                               # {'rumah' (house), 'apartemen' (apartment), 
+                               #  'kost' (boarding room), 'villa', 'hotel'}
+num_pages: 20                  # Number of pages to scrape per region and property type
